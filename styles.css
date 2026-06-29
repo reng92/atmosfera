@@ -40,8 +40,8 @@ img{max-width:100%;display:block}
   backdrop-filter:blur(10px);
   border-bottom:1px solid var(--line);
 }
-.header-inner{display:flex;align-items:center;justify-content:space-between;height:74px}
-.brand-logo{height:46px;width:auto;border-radius:8px}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:104px}
+.brand-logo{height:84px;width:auto;border-radius:10px}
 .nav{display:flex;align-items:center;gap:34px}
 .nav a{
   font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;
@@ -222,7 +222,7 @@ img{max-width:100%;display:block}
 }
 @media(max-width:640px){
   .nav{
-    position:fixed;inset:74px 0 auto 0;flex-direction:column;gap:0;
+    position:fixed;inset:104px 0 auto 0;flex-direction:column;gap:0;
     background:var(--cream);border-bottom:1px solid var(--line);
     padding:10px 0;transform:translateY(-130%);transition:transform .35s;
   }
