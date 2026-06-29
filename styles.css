@@ -74,16 +74,13 @@ img{max-width:100%;display:block}
   font-size:.8rem;letter-spacing:.28em;text-transform:uppercase;
   color:var(--grey);margin-bottom:14px;
 }
-.hero-title{
-  font-family:var(--serif);font-weight:600;
-  font-size:clamp(3.6rem,11vw,7rem);
-  letter-spacing:.16em;color:var(--ivory);
-  text-shadow:0 4px 26px rgba(94,96,102,.22);
-  line-height:1;
-}
-.hero-tagline{
-  font-family:var(--script);font-size:clamp(1.8rem,5vw,2.8rem);
-  color:var(--grey);margin:-2px 0 22px;
+.hero-logo-wrap{margin:6px auto 24px;display:flex;justify-content:center}
+.hero-logo{
+  width:min(560px,86vw);height:auto;
+  border-radius:22px;
+  background:var(--ivory);
+  padding:14px;
+  box-shadow:0 26px 60px -28px rgba(94,96,102,.55);
 }
 .hero-sub{
   max-width:620px;margin:0 auto 34px;color:var(--ink);
