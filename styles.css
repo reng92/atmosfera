@@ -226,7 +226,7 @@ img{max-width:100%;display:block}
 .map-placeholder p{color:var(--grey);max-width:340px;font-size:.95rem}
 
 /* ===== Contatti / Social ===== */
-.social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.social-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 .social-card{
   background:var(--ivory);border:1px solid var(--line);border-radius:var(--radius);
   padding:34px;text-align:center;transition:.3s;
