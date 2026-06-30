@@ -32,6 +32,7 @@
       <nav class="nav" id="nav">
         <a href="#chi-siamo">Chi siamo</a>
         <a href="#prodotti">Prodotti</a>
+        <a href="#galleria">Galleria</a>
         <a href="#brand">Brand</a>
         <a href="#dove">Dove siamo</a>
         <a href="#contatti" class="nav-cta">Contatti</a>
@@ -44,6 +45,7 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero">
+    <img src="foto-tavola.jpeg" alt="" class="hero-bg" aria-hidden="true" />
     <div class="hero-leaf hero-leaf--left">&#10047;</div>
     <div class="container hero-inner reveal">
       <p class="hero-kicker">Articoli per la casa &middot; Napoli Fuorigrotta</p>
@@ -76,12 +78,13 @@
           <span class="badge">Per casa &amp; ristorazione</span>
         </div>
       </div>
-      <div class="chi-card reveal">
-        <span class="chi-star">&#10047;</span>
-        <p class="chi-card-label">Ci trovi qui</p>
-        <p class="chi-card-addr">Mercato di Fuorigrotta<br />Via Pietro Metastasio &middot; Box D28<br />80125 Napoli (NA)</p>
-        <a href="#dove" class="link-arrow">Apri la mappa &rarr;</a>
-      </div>
+      <figure class="chi-photo reveal">
+        <img src="foto-vetrina.jpeg" alt="La vetrina di Atmosfera Home &amp; Living nel mercato di Fuorigrotta a Napoli" loading="lazy" />
+        <figcaption>
+          <span class="chi-card-label">Ci trovi qui</span>
+          Mercato di Fuorigrotta &middot; Via Metastasio &middot; Box D28
+        </figcaption>
+      </figure>
     </div>
   </section>
 
@@ -152,8 +155,39 @@
     </div>
   </section>
 
+  <!-- ===== GALLERIA ===== -->
+  <section class="section" id="galleria">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Uno sguardo da vicino</p>
+        <h2 class="section-title">La nostra bottega</h2>
+        <p class="section-lead">Qualche scatto dal box D28: la tavola apparecchiata, gli scaffali e l'oggettistica che trovi da noi.</p>
+      </div>
+      <div class="gallery reveal">
+        <figure class="gallery-item gallery-item--wide">
+          <img src="foto-tavola.jpeg" alt="Tavola apparecchiata con piatti, calici e centrotavola da Atmosfera" loading="lazy" />
+        </figure>
+        <figure class="gallery-item">
+          <img src="foto-scaffali.jpeg" alt="Scaffali con piatti dorati, bicchieri e oggettistica per la casa" loading="lazy" />
+        </figure>
+        <figure class="gallery-item">
+          <img src="foto-orologi.jpeg" alt="Orologi da parete, cornici e decorazioni" loading="lazy" />
+        </figure>
+        <figure class="gallery-item">
+          <img src="foto-esposizione.jpeg" alt="Esposizione di pentole, posate e piccoli elettrodomestici" loading="lazy" />
+        </figure>
+        <figure class="gallery-item gallery-item--wide">
+          <img src="foto-interno.jpeg" alt="Interno del negozio Atmosfera con scaffali e piccoli elettrodomestici" loading="lazy" />
+        </figure>
+        <figure class="gallery-item">
+          <img src="foto-ambiente.jpeg" alt="Ambiente del negozio Atmosfera Home & Living" loading="lazy" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== BRAND ===== -->
-  <section class="section" id="brand">
+  <section class="section section-alt" id="brand">
     <div class="container">
       <div class="section-head reveal">
         <p class="eyebrow">Qualità garantita</p>
@@ -176,7 +210,7 @@
   </section>
 
   <!-- ===== DOVE SIAMO ===== -->
-  <section class="section section-alt" id="dove">
+  <section class="section" id="dove">
     <div class="container dove-grid">
       <div class="dove-text reveal">
         <p class="eyebrow">Dove siamo</p>
@@ -193,16 +227,21 @@
       </div>
       <div class="map-wrap reveal">
         <iframe
+          id="gmap"
           title="Mappa Atmosfera — Mercato di Fuorigrotta, Via Metastasio, Napoli"
-          src="https://maps.google.com/maps?q=Mercato%20di%20Fuorigrotta%20Via%20Metastasio%20Napoli&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+          data-consent-src="https://maps.google.com/maps?q=Mercato%20di%20Fuorigrotta%20Via%20Metastasio%20Napoli&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
           width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map-placeholder" id="mapPlaceholder">
+          <p>La mappa di Google è disabilitata finché non accetti i cookie di terze parti.</p>
+          <button type="button" class="btn btn-primary" data-cookie-accept-maps>Abilita la mappa</button>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ===== CONTATTI ===== -->
-  <section class="section" id="contatti">
+  <section class="section section-alt" id="contatti">
     <div class="container">
       <div class="section-head reveal">
         <p class="eyebrow">Restiamo in contatto</p>
@@ -247,10 +286,47 @@
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>&copy; <span id="year"></span> Atmosfera di Sollazzo Sara &middot; P.IVA 10897681218</p>
+      <nav class="footer-legal">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="cookie.html">Cookie Policy</a>
+        <button type="button" class="footer-legal-btn" data-cookie-settings>Gestisci cookie</button>
+      </nav>
+      <p>&copy; <span id="year"></span> Atmosfera di Sollazzo Sara &middot; P.IVA 10897681218 &middot; Tutti i diritti riservati</p>
     </div>
   </footer>
 
+  <!-- ===== COOKIE BANNER ===== -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite"
+       aria-label="Informativa sui cookie" hidden>
+    <div class="cookie-inner">
+      <div class="cookie-text">
+        <p class="cookie-title">Rispettiamo la tua privacy</p>
+        <p>Usiamo cookie tecnici necessari al funzionamento del sito e, solo previo tuo consenso,
+          cookie di terze parti (Google Maps) per mostrarti la mappa del negozio. Puoi accettarli,
+          rifiutarli o scegliere le preferenze. Per saperne di più leggi la
+          <a href="cookie.html">Cookie Policy</a> e la <a href="privacy.html">Privacy Policy</a>.</p>
+
+        <div class="cookie-prefs" id="cookiePrefs" hidden>
+          <label class="cookie-option">
+            <input type="checkbox" checked disabled />
+            <span><strong>Cookie tecnici / necessari</strong> — sempre attivi, indispensabili al funzionamento del sito.</span>
+          </label>
+          <label class="cookie-option">
+            <input type="checkbox" id="prefThirdParty" />
+            <span><strong>Cookie di terze parti</strong> — Google Maps, per visualizzare la mappa interattiva.</span>
+          </label>
+        </div>
+      </div>
+      <div class="cookie-actions">
+        <button type="button" class="btn btn-ghost cookie-btn" data-cookie-reject>Rifiuta</button>
+        <button type="button" class="btn btn-ghost cookie-btn" data-cookie-prefs-toggle>Preferenze</button>
+        <button type="button" class="btn btn-primary cookie-btn" data-cookie-accept-all>Accetta tutti</button>
+        <button type="button" class="btn btn-primary cookie-btn" data-cookie-save hidden>Salva preferenze</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="cookie-consent.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
